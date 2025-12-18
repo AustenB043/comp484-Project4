@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSUN Map Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ_b-O5g1qSaufTV0xXZIaBWCdqL9DuY0&callback=initMap" async defer></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSUN Map Quiz</h1>
+            <div class="game-info">
+                <div class="score-display">
+                    <span>Score: <span id="score">0</span>/5</span>
+                </div>
+                <div class="timer-display">
+                    <span>Time: <span id="timer">0</span>s</span>
+                </div>
+                <div class="high-score-display">
+                    <span>Best Time: <span id="highScore">--</span>s</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="quiz-info">
+            <h2 id="question">Please double click on the map the location of:</h2>
+            <h3 id="locationName">Loading...</h3>
+        </div>
+        
+        <div id="map"></div>
+        
+        <div id="feedback" class="feedback hidden"></div>
+        
+        <div id="gameOver" class="game-over hidden">
+            <h2>Game Complete!</h2>
+            <p id="finalScore"></p>
+            <p id="finalTime"></p>
+            <button id="playAgain">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
